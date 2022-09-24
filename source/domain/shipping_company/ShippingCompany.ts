@@ -28,7 +28,7 @@ export default class ShippingCompany {
 
     private validate(){
         if (this._name === "" || this._name.length > this.NAME_CHARACTERS_LIMIT) {
-            throw new Error(`Name field need to be seted and can't have more than 100 characters`)
+            throw new Error(`Name field need to be seted and can't have more than ${this.NAME_CHARACTERS_LIMIT} characters`)
         }
         if (`${this._cnpj}`.length !== 14) {
             throw new Error(`CNPJ must have fourteen characters`)
